@@ -1,8 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:from_css_color/from_css_color.dart';
+import 'package:from_css_color/from_css_color.dart';
 import 'package:iot_project/onboarding_page.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -27,17 +26,25 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               child: Image.asset(
                 'assets/images/camink.png',
-                width: 200,
-                height: 200,
+                width: 300,
+                height: 300,
               ),
             ),
-            Text(
-              "Camink Parkink",
-              style: GoogleFonts.hammersmithOne(),
+            Container(
+              transform: Matrix4.translationValues(0, -10, 0),
+              child: Text(
+                "CAMINK PARKING",
+                style: GoogleFonts.hammersmithOne(
+                  fontSize: 35,
+                  fontWeight: FontWeight.w700,
+                  color: fromCssColor("#F8AA27"),
+                ),
+              ),
             )
           ],
         ),
