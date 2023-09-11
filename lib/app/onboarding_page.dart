@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iot_project/app/home_page.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});
@@ -9,9 +10,7 @@ class OnBoardingPage extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         body: Container(
-          // decoration: BoxDecoration(border: Border.all()),
           child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
@@ -27,30 +26,34 @@ class OnBoardingPage extends StatelessWidget {
                     Text(
                       "Welcome to 👏",
                       style: GoogleFonts.hammersmithOne(
-                          textStyle: TextStyle(fontSize: 20)),
+                          textStyle: const TextStyle(fontSize: 20)),
                     ),
                     Text(
                       "Camink Parking",
                       style: GoogleFonts.hammersmithOne(
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                               fontSize: 30,
                               color: Color.fromRGBO(248, 170, 39, 1))),
                     ),
                     Text(
                       "Parkir Aman",
                       style: GoogleFonts.hammersmithOne(
-                          textStyle: TextStyle(fontSize: 20)),
+                          textStyle: const TextStyle(fontSize: 20)),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromRGBO(248, 170, 39, 1)),
-                      onPressed: () {},
+                          primary: const Color.fromRGBO(248, 170, 39, 1)),
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                const HomePage()));
+                      },
                       child: Text("Next",
                           style: GoogleFonts.hammersmithOne(
-                              textStyle: TextStyle(color: Colors.white))),
+                              textStyle: const TextStyle(color: Colors.white))),
                     )
                   ],
                 ),
