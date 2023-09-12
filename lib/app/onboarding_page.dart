@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iot_project/home_page.dart';
-import 'package:iot_project/app/home_page.dart';
+import 'package:from_css_color/from_css_color.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});
@@ -9,58 +9,97 @@ class OnBoardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Container(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Align(
-                alignment: Alignment.center,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      'assets/images/motor.png',
-                      width: 200,
-                      height: 200,
-                    ),
-                    Text(
-                      "Welcome to 👏",
-                      style: GoogleFonts.hammersmithOne(
-                          textStyle: const TextStyle(fontSize: 20)),
-                    ),
-                    Text(
-                      "Camink Parking",
-                      style: GoogleFonts.hammersmithOne(
-                          textStyle: const TextStyle(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/images/motor.png',
+                    width: 380,
+                    height: 300,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                            text: "Welcome To",
+                            style: GoogleFonts.hammersmithOne(
+                              color: fromCssColor("#074684"),
                               fontSize: 30,
-                              color: Color.fromRGBO(248, 170, 39, 1))),
-                    ),
-                    Text(
-                      "Parkir Aman",
-                      style: GoogleFonts.hammersmithOne(
-                          textStyle: const TextStyle(fontSize: 20)),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: const Color.fromRGBO(248, 170, 39, 1)),
-                      onPressed: () {
-                        // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        //     builder: (BuildContext context) =>
-                        //         const HomePage()));
-                      },
-                      child: Text("Next",
+                            ),
+                          ),
+                          TextSpan(
+                            text: " 👋",
+                            style: TextStyle(
+                              fontSize: 30,
+                            ),
+                          ),
+                        ]),
+                      ),
+                      Text(
+                        "Camink Parking",
+                        style: GoogleFonts.hammersmithOne(
+                            textStyle: const TextStyle(
+                                fontSize: 40,
+                                color: Color.fromRGBO(248, 170, 39, 1))),
+                      ),
+                      Text(
+                        "Sistem Parkir Aman",
+                        style: GoogleFonts.hammersmithOne(
+                          color: fromCssColor("#074684"),
+                          fontSize: 23,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePage(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      height: 50,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: fromCssColor(
+                          "#F8AA27",
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Next",
                           style: GoogleFonts.hammersmithOne(
-                              textStyle: const TextStyle(color: Colors.white))),
-                    )
-                  ],
-                ),
+                            color: fromCssColor("#074684"),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 18,
+                            letterSpacing: 1,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
