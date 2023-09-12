@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iot_project/splash_screen.dart';
+import 'package:iot_project/splash_screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Camink Parking',
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: SplashScreen(),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:from_css_color/from_css_color.dart';
-import 'package:iot_project/app/home_page.dart';
+import 'package:iot_project/pages/home_page.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});

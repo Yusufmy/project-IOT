@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:from_css_color/from_css_color.dart';
-import 'package:iot_project/app/onboarding_page.dart';
+import 'package:iot_project/pages/onboarding_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
