@@ -37,6 +37,8 @@ dependencies:
   from_css_color: ^2.0.0
   google_fonts: ^5.1.0
   percent_indicator: ^4.2.3
+  calendar_date_picker2: ^0.5.3
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:

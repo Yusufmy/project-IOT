@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iot_project/home_page.dart';
 import 'package:iot_project/app/home_page.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -48,9 +47,9 @@ class OnBoardingPage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                           primary: const Color.fromRGBO(248, 170, 39, 1)),
                       onPressed: () {
-                        // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        //     builder: (BuildContext context) =>
-                        //         const HomePage()));
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                const HomePage()));
                       },
                       child: Text("Next",
                           style: GoogleFonts.hammersmithOne(
